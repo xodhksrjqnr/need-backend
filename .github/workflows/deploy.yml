@@ -50,6 +50,6 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          platforms: linux/amd64, linux/arm64
+          platforms: ubuntu, ubuntu
           push: true
           tags: taewakim/need_backend_server
