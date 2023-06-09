@@ -3,14 +3,14 @@ name: master-deploy-action
 on:
   pull_request:
     branches:
-      - master
+      - main
       - develop
     paths-ignore:
       - './README.md'
       - './github/*'
   push:
     branches:
-      - master
+      - main
       - develop
     paths-ignore:
       - './README.md'
