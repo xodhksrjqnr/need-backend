@@ -30,6 +30,9 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           
+      - name: Set up Application Configuration
+        run: echo "${{ secrets.APPLICATION_Config }}" > ./src/main/resources/application.yml
+          
       - name: Test
         run: ./gradlew test
       
