@@ -57,7 +57,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v2
         with:
           role-to-assume: arn:aws:iam::620876430593:role/GitHubAction-AssumeRoleWithAction
-          aws-region: us-east-1
+          aws-region: ap-northeast-2a
       
       - name: Docker Pull & Docker Image Run
         run: |
