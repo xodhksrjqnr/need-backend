@@ -16,6 +16,10 @@ on:
       - './README.md'
       - './github/*'
       
+permissions:
+      id-token: write
+      contents: read
+      
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -54,7 +58,7 @@ jobs:
           tags: taewakim/need_backend_server:latest
           
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v3
+        uses: aws-actions/configure-aws-credentials@v2
         with:
           role-to-assume: arn:aws:iam::620876430593:role/GitHubAction-AssumeRoleWithAction
           aws-region: ap-northeast-2a
