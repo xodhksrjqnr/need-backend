@@ -7,14 +7,13 @@ on:
       - develop
     paths-ignore:
       - './README.md'
-      - './github/*'
+      
   push:
     branches:
       - main
       - develop
     paths-ignore:
       - './README.md'
-      - './github/*'
       
 permissions:
       id-token: write
