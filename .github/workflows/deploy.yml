@@ -64,6 +64,6 @@ jobs:
           aws-region: ap-northeast-2
       
       - name: Docker Pull & Docker Image Run
-        run: |
-          docker pull taewakim/need_backend_server:latest
-          docker run -dp 8080:8080 taewakim/need_backend_server:latest
+        run: ls -al
+#         run: docker pull taewakim/need_backend_server:latest
+#         run: docker run -dp 8080:8080 taewakim/need_backend_server:latest
