@@ -64,6 +64,7 @@ jobs:
     steps:
       - name: Docker Pull
         run: |
+          docker stop backend_server && docker rm backend_server
           docker image pull taewakim/need_backend_server:latest
-          docker run -dp 8080:8080 taewakim/need_backend_server:latest
+          docker run -dp 8080:8080 --name backend_server taewakim/need_backend_server:latest
           
