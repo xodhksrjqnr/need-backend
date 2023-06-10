@@ -54,12 +54,12 @@ jobs:
           tags: taewakim/need_backend_server:latest
           
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v2
+        uses: aws-actions/configure-aws-credentials@v3
         with:
           role-to-assume: arn:aws:iam::620876430593:role/GitHubAction-AssumeRoleWithAction
           aws-region: ap-northeast-2a
       
       - name: Docker Pull & Docker Image Run
-        run: ls -al
-#           docker pull taewakim/need_backend_server:latest
-#           docker run -dp 8080:8080 taewakim/need_backend_server:latest
+        run: |
+          docker pull taewakim/need_backend_server:latest
+          docker run -dp 8080:8080 taewakim/need_backend_server:latest
