@@ -15,10 +15,6 @@ on:
     paths-ignore:
       - './README.md'
 
-env:
-  IMAGE: taewakim/need_backend_server:latest
-  CONTAINER: backend_server
-
 permissions:
       id-token: write
       contents: read
@@ -58,7 +54,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: $IMAGE
+          tags: taewakim/need_backend_server:latest
 
   deploy:
     runs-on: [ self-hosted, label-go ]
@@ -67,8 +63,8 @@ jobs:
     steps:
       - name: Docker Pull
         run: |
-          docker stop $CONTAINER && docker rm $CONTAINER
-          docker rmi $IMAGE
-          docker image pull $IMAGE
-          docker run -dp 8080:8080 --name $CONTAINER $IMAGE
+          docker stop backend_server && docker rm backend_server
+          docker rmi taewakim/need_backend_server:latest
+          docker image pull taewakim/need_backend_server:latest
+          docker run -dp 8080:8080 --name backend_server taewakim/need_backend_server:latest
           
