@@ -29,6 +29,3 @@
 |URL|설명|
 |---|---|
 |GET /conditions|검색 조건 조회|
-
-### ERD
-<img width="616" alt="스크린샷 2023-04-18 오후 10 14 47" src="https://user-images.githubusercontent.com/48250370/232788844-0019f3b8-d968-4913-b76b-1866567e0442.png">
