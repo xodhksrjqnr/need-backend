@@ -9,6 +9,9 @@
 - Spring Boot 3.0.5
 - Java 17
 - Spring Data JPA
+- Github Actions
+- Docker
+- AWS EC2
 
 ## 구현 기능
 
