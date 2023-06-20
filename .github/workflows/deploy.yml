@@ -69,4 +69,12 @@ jobs:
           docker rmi taewakim/need_backend_server:latest
           docker image pull taewakim/need_backend_server:latest
           docker run -dp 8080:8080 --name backend_server taewakim/need_backend_server:latest
-          
+      
+      - name: Send messages to Slack
+        uses: 8398a7/action-slack@v3
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        with:
+          status: ${{ job.status }}
+          author_name: Need-Backend Deploy
+          fields: repo,message,commit,author,action,eventName,ref,workflow,job,took
