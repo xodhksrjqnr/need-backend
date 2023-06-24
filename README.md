@@ -15,9 +15,14 @@
 
 ## 구현 기능
 
-- 지원 정책 게시물 조회
-- 검색 조건에 따른 게시물 필터링
-- 검색 조건 조회
+- Post 도메인 구현 (필터 조건에 따른 SQL 쿼리문 생성 및 Post 조회 기능)
+- Condition 도메인 구현 (Benefit, Job Entity에 대한 SQL 쿼리문 생성 및 이름 조회 기능)
+- CORS 설정
+- API 서버 구현
+- AWS EC2를 이용한 클라우드 서비스 운영
+- Docker, Github Actions를 이용한 빌드 및 배포 자동화
+- Github Actions, Slack을 이용한 빌드 및 배포 완료 알림
+- DB 서버의 MySQL에 대한 외부 접속
 
 ## REST API
 
