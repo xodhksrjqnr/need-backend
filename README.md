@@ -37,3 +37,7 @@
 |URL|설명|
 |---|---|
 |GET /conditions|검색 조건 조회|
+
+## 구조
+
+<img width="890" alt="스크린샷 2023-07-04 오후 2 33 49" src="https://github.com/xodhksrjqnr/need-backend/assets/48250370/88812165-04e4-4425-8bb1-0006a93c0063">
