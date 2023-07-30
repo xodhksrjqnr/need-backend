@@ -60,5 +60,10 @@ jobs:
           push: true
           tags: taewakim/need_backend_server:latest
 
+  deploy:
+    runs-on: [ self-hosted, label-go ]
+    needs: build
+    
+    steps:
       - name: Docker Pull
         run: docker image pull taewakim/need_backend_server:latest
